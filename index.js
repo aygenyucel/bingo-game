@@ -28,3 +28,27 @@ const callNumber = function () {
     }
   }
 };
+
+let numberArr = [];
+for (let i = 0; i < 75; i++) {
+  numberArr.push(i + 1);
+}
+
+const callUniqueNumber = function () {
+  if (numberArr.length !== 0) {
+    const newNumberIndex = Math.floor(Math.random() * numberArr.length);
+    const newNumber = numberArr[newNumberIndex]; //numberArr[index 0 to index 74]
+
+    console.log("new number:", newNumber);
+
+    const cellNode = document.getElementsByClassName("cell");
+    for (let cell of cellNode) {
+      if (cell.innerText == newNumber) {
+        cell.style.backgroundColor = "blue";
+      }
+    }
+    numberArr.splice(newNumberIndex, 1);
+  } else {
+    console.log("There are no numbers left!");
+  }
+};
