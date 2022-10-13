@@ -1,3 +1,20 @@
 body {
   margin: 0;
 }
+
+.container {
+  max-width: 750px;
+  margin-inline: auto; /*left and right*/
+  margin-block: 3rem; /*top and bottom*/
+}
+
+#board {
+  background-color: bisque;
+}
+
+.cell {
+  display: inline-block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  text-align: center;
+}
